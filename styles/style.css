@@ -11,6 +11,7 @@ body {
 }
 .container {
   width: 870px;
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 30px;
   background-color: #fff;
@@ -94,4 +95,125 @@ body {
   text-decoration: none;
   font-weight: 500;
   color: #562eff;
+}
+
+/* ++++++++++++++++++++++++++++
+Latest Course styles
+++++++++++++++++++++++++++++ */
+#main-bottom {
+  margin-top: 24px;
+}
+#main-bottom .content-title {
+  margin: 24px 0;
+}
+#main-bottom .courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+}
+.single-course {
+  padding: 13px 17px 16px 11px;
+  box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.05);
+}
+.single-course .course-banner img {
+  width: 224px;
+  height: 104px;
+}
+.single-course .course-detail .course-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #1e1e1e;
+  margin: 19px 0 7px 0;
+}
+.single-course .course-detail .course-author {
+  color: #ed6b4f;
+  font-size: 15px;
+  line-height: 17px;
+  margin-bottom: 12px;
+}
+.single-course .course-detail .filled {
+  color: #ffc014;
+  font-size: 12px;
+}
+.single-course .course-detail .empty {
+  color: #aeaeae;
+  font-size: 12px;
+}
+.single-course .course-detail .course-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.single-course .course-info .course-rattings {
+  display: flex;
+  align-items: center;
+}
+.single-course .course-info .course-rattings span {
+  color: #a2a2a2;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-left: 11px;
+}
+.single-course .course-detail .course-duration {
+  width: 95px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe4e8;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.single-course .course-detail .course-duration i {
+  font-size: 20px;
+  color: #ff4a60;
+}
+.single-course .course-detail .course-duration span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ff4a60;
+  line-height: 22px;
+  margin-left: 6px;
+}
+
+/* ==================
+  Media Queries
+===================== */
+/* Mobile Device */
+@media only screen and (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+  .players {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .top-blogs .blogs {
+    grid-template-columns: 1fr;
+  }
+  #main-bottom .courses {
+    grid-template-columns: 1fr;
+  }
+  .single-player {
+    flex-direction: column;
+  }
+}
+/* Tablet Debice */
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+  .container {
+    width: 100%;
+  }
+  .players,
+  .top-blogs .blogs,
+  #main-bottom .courses {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .single-player,
+  .single-blog {
+    flex-direction: column;
+  }
 }
